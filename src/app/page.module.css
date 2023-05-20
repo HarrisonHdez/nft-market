@@ -12,7 +12,6 @@
   max-width: 1440px;
   width: 95%;
   margin: auto;
-  padding: 32px 0 0;
 }
 .form__container {
     width: 100%;
@@ -27,6 +26,11 @@
   min-height: 508px;
   height: auto;
   margin: 56px auto 0;
+}
+.form__logo_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 88px;
 }
 .form__title_container {
   margin-bottom: 56px;
@@ -207,10 +211,7 @@ cursor: pointer;
 .form__logo_mobile {
   display: block;
 }
-.form__logo_container {
-  display: flex;
-  justify-content: center;
-}
+
 .form__barra {
   display: flex;
   margin: auto;
