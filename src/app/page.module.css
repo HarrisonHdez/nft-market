@@ -231,6 +231,14 @@ cursor: pointer;
   }
   .form__image {
     display: block;
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  .form__image img {
+    max-width: 768px;
+    width: 100%;
+    height: auto;
   }
   .form__barra {
     display: none;

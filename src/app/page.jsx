@@ -1,16 +1,37 @@
+"use client"
+
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link';
-
-export default function Home() {
-
+import { useState } from 'react';
 
 
 
 
 
 
+const Form = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aquí puedes realizar las acciones necesarias con los datos del formulario
+    console.log(email);
+    console.log(password);
+
+    setEmail('')
+    setPassword('')
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+  
 
 
   return (
@@ -35,7 +56,7 @@ export default function Home() {
               className={styles.form__logo_mobile}
             />
           </div>
-          <form action="" className={styles.form}>
+          <form action="" className={styles.form} onSubmit={handleSubmit} >
             <div className={styles.form__title_container}>
               <h2 className={styles.form__title}>NFT Access</h2>
               <p className={styles.form__subtitle}>
@@ -55,6 +76,9 @@ export default function Home() {
                     placeholder="debra.holt@example.com"
                     required
 
+                    value={email}
+                    onChange={handleEmailChange}
+
                   />
                 </div>
 
@@ -65,8 +89,11 @@ export default function Home() {
                     type="password"
                     id="password"
                     name="password"
-                    placeholder="••••••••"
+                    placeholder="Password"
                     required
+
+                    value={password}
+                    onChange={handlePasswordChange}
                   />
                 </div>
               </div>
@@ -76,7 +103,7 @@ export default function Home() {
                   <input 
                   type="checkbox" 
                   id="checkbox" 
-                  required
+                  // required
                   
                   />
                   <label htmlFor="checkbox">Remember me</label>
@@ -127,5 +154,7 @@ export default function Home() {
         </div>
       </section>
     </main>
-  );
+  )
 }
+
+export default Form
