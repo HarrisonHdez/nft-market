@@ -1,13 +1,9 @@
-"use client"
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link';
 
 export default function Home() {
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-  }
 
 
 
@@ -39,7 +35,7 @@ export default function Home() {
               className={styles.form__logo_mobile}
             />
           </div>
-          <form action="" className={styles.form} onClick={onSubmit}>
+          <form action="" className={styles.form}>
             <div className={styles.form__title_container}>
               <h2 className={styles.form__title}>NFT Access</h2>
               <p className={styles.form__subtitle}>
@@ -57,6 +53,8 @@ export default function Home() {
                     id="email"
                     name="email"
                     placeholder="debra.holt@example.com"
+                    required
+
                   />
                 </div>
 
@@ -68,13 +66,19 @@ export default function Home() {
                     id="password"
                     name="password"
                     placeholder="••••••••"
+                    required
                   />
                 </div>
               </div>
 
               <div className={styles.form__group_checkbox}>
                 <div className={styles.form__checkbox}>
-                  <input type="checkbox" id="checkbox" name="remember" />
+                  <input 
+                  type="checkbox" 
+                  id="checkbox" 
+                  required
+                  
+                  />
                   <label htmlFor="checkbox">Remember me</label>
                 </div>
                 <Link href="/">Forgot Password?</Link>
