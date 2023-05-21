@@ -147,7 +147,7 @@ const FormRegister = () => {
 
               <div className={styles.form__buttons_container}>
                 <button className={styles.form__signin} aria-label="Sign in">
-                  Sign in
+                  Sign up
                 </button>
                 <button
                   className={styles.form__google}
