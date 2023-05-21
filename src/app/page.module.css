@@ -59,10 +59,76 @@
     gap: 20px;
     flex-direction: column;
 }
+.form__group1 {
+  display: flex;
+  gap: 10px;
+}
+.form__group_name {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form__group_name label {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #344054; 
+}
+.form__group_name input {
+  background: none;
+  outline: none;
+  width: 100%;
+  height: 44px;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+  padding: 10px 14px ;
+}
+.form__group_lastname {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form__group_lastname label {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #344054; 
+}
+.form__group_lastname input {
+  background: none;
+  width: 100%;
+
+  outline: none;
+  height: 44px;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+  padding: 10px 14px ;
+
+}
+
+
 .form__group {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+.form__group label {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #344054;
+  text-transform: capitalize;
 }
 .form__group input {
   background: none;
@@ -72,8 +138,6 @@
   border-radius: 8px;
   padding: 10px 14px ;
 
-
-  
 }
 
 .placeholder__input::placeholder {
@@ -110,6 +174,7 @@
   text-align: left;
   color: #344054;
 }
+
 .form__checkbox {
   display: flex;
   gap: 8px;
@@ -147,7 +212,6 @@
 }
 .form__google {
   border: none;
-
 cursor: pointer;
   font-family: Inter;
   font-size: 16px;
@@ -155,8 +219,10 @@ cursor: pointer;
   line-height: 20px;
   letter-spacing: 0em;
   text-align: center;
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   max-width: 360px;
   width: 100%;
   /* color: #344054; */

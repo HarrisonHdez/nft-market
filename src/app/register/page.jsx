@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from '../page.module.css'
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -10,7 +10,7 @@ import { useState } from 'react';
 
 
 
-const FormLogin = () => {
+const FormRegister = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -56,16 +56,45 @@ const FormLogin = () => {
               className={styles.form__logo_mobile}
             />
           </div>
-          <form action="" className={styles.form} onSubmit={handleSubmit} >
+          <form action="" className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.form__title_container}>
-              <h2 className={styles.form__title}>NFT Access</h2>
+              <h2 className={styles.form__title}>NFT Register</h2>
               <p className={styles.form__subtitle}>
-                Please fill your detail to access your account.
+                Please enter your information to register
               </p>
             </div>
 
             <div>
               <div className={styles.form__input_container}>
+                <div className={styles.form__group1}>
+                  <div className={styles.form__group_name}>
+                    <label htmlFor="email">Name</label>
+                    <input
+                      className={styles.placeholder__input}
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Name"
+                      required
+                      value={email}
+                      onChange={handleEmailChange}
+                    />
+                  </div>
+                  <div className={styles.form__group_lastname}>
+                    <label htmlFor="email">Last Name</label>
+                    <input
+                      className={styles.placeholder__input}
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Last Name"
+                      required
+                      value={email}
+                      onChange={handleEmailChange}
+                    />
+                  </div>
+                </div>
+
                 <div className={styles.form__group}>
                   <label htmlFor="email">Email</label>
                   <input
@@ -75,10 +104,8 @@ const FormLogin = () => {
                     name="email"
                     placeholder="name@example.com"
                     required
-
                     value={email}
                     onChange={handleEmailChange}
-
                   />
                 </div>
 
@@ -91,7 +118,19 @@ const FormLogin = () => {
                     name="password"
                     placeholder="Password"
                     required
-
+                    value={password}
+                    onChange={handlePasswordChange}
+                  />
+                </div>
+                <div className={styles.form__group}>
+                  <label htmlFor="password">Confirm Password</label>
+                  <input
+                    className={styles.placeholder__input}
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Confirm Password"
+                    required
                     value={password}
                     onChange={handlePasswordChange}
                   />
@@ -100,13 +139,8 @@ const FormLogin = () => {
 
               <div className={styles.form__group_checkbox}>
                 <div className={styles.form__checkbox}>
-                  <input 
-                  type="checkbox" 
-                  id="checkbox" 
-                  // required
-                  
-                  />
-                  <label htmlFor="checkbox">Remember me</label>
+                  <input type="checkbox" id="checkbox" />
+                  <label htmlFor="checkbox">Accept terms</label>
                 </div>
                 <Link href="/">Forgot Password?</Link>
               </div>
@@ -126,15 +160,15 @@ const FormLogin = () => {
                     alt="registro con google image"
                     priority={true}
                   />
-                  Sign in with Google
+                  Sign in with google
                 </button>
               </div>
 
               <p> </p>
               <div className={styles.form__down}>
-                <p>Don’t have an account?</p>
+                <p>You have an account?</p>
                 <div className={styles.form__signup}>
-                  <Link href="/register">Sign up</Link>
+                  <Link href="/">Log In</Link>
                 </div>
               </div>
             </div>
@@ -161,7 +195,7 @@ const FormLogin = () => {
         </div>
       </section>
     </main>
-  )
+  );
 }
 
-export default FormLogin
+export default FormRegister
